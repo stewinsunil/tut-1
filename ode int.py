@@ -24,6 +24,7 @@ sol = solve_ivp(
 plt.figure(figsize=(8, 5))
 plt.plot(sol.t, sol.y[0], "b-", linewidth=2, label="y(t)")
 plt.scatter([0], [1.0], color="red", label="initial condition")
+plt.axhline(0, color="black", linewidth=0.8, alpha=0.5)
 plt.xlabel("t")
 plt.ylabel("y")
 plt.title("Single ODE: y' = -k y")
